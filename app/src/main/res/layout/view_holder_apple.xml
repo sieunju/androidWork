@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_rl_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_00BCD4"
+        >
+        <TextView
+            android:id="@+id/root_tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textStyle="bold"
+            android:textColor="@color/color_9B7257"
+            android:textSize="@dimen/size_40"
+            tools:text="니나노오~"
+            />
+
+        <TextView
+            android:id="@+id/sub_title_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/root_tv_title"
+            android:layout_centerHorizontal="true"
+            android:textColor="@color/color_FFFFFF"
+            android:textSize="@dimen/size_20"
+            tools:text="메시지~"
+            />
+    </RelativeLayout>
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_5"
+        android:layout_below="@+id/background_layout"
+        />
+</RelativeLayout>

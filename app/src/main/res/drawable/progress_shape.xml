@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/progress_shape">
+        <shape>
+            <corners android:radius="@dimen/progress_view_radius" />
+            <gradient
+                android:angle="270"
+                android:centerColor="@color/color_ff0066"
+                android:centerY="0.5"
+                android:endColor="@color/color_00ff0f"
+                android:startColor="@color/color_ee2d7a" />
+        </shape>
+    </item>
+</layer-list>

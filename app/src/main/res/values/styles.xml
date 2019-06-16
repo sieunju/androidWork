@@ -1,0 +1,32 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/color_00FFFFFF</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="NoActionBar_Light" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/color_FFFFFF</item>
+        <item name="colorPrimaryDark">@color/color_000000</item>
+        <item name="colorAccent">@color/color_8D118D</item>
+    </style>
+
+    <!-- 헤더 접혔을때 -->
+    <style name="CollapsedCollapsingToolbarTextStyle" parent="AppTheme">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">15dp</item>
+        <item name="android:layout_margin">@dimen/size_20</item>
+    </style>
+
+    <!-- 헤더 펼쳤을때 -->
+    <style name="ExpandedCollapsingToolbarTextStyle" parent="AppTheme">
+        <item name="android:textColor">@color/color_FFFFFF</item>
+        <item name="android:textSize">30dp</item>
+    </style>
+
+</resources>

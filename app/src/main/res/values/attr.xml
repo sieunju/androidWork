@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CustomProgressView Attr [Start] -->
+    <declare-styleable name="CustomProgressView">
+        <attr name="type" format="enum"> <!-- ProgressView type horizontal or vertical -->
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <attr name="gradientRadius" format="dimension" /> <!-- defines gradient radius -->
+        <attr name="gradientStartColor" format="color" /> <!-- defines gradient start color -->
+        <attr name="gradientCenterColor" format="color" /> <!-- defines gradient center color -->
+        <attr name="gradientEndColor" format="color" /> <!-- defines gradient end color -->
+        <attr name="gradientLocation" format="float" /> <!-- defines gradient color location -->
+        <attr name="bgColor" format="color" />   <!-- Background Color -->
+        <attr name="max" format="integer" /> <!-- defines the maximum value -->
+        <attr name="min" format="integer" /> <!-- defines the minimum value -->
+    </declare-styleable>
+    <!-- CustomProgressView Attr [End] -->
+
+    <!-- [s] ParallaxHeaderView Attr -->
+    <declare-styleable name="ParallaxHeaderView">
+        <attr name="image_view_enable" format="boolean"/>
+    </declare-styleable>
+    <!-- [e] ParallaxHeaderView Attr -->
+
+    <!-- [s] SpannedGridLayoutManager Attr -->
+    <declare-styleable name="SpannedGridLayoutManager">
+        <attr name="android:orientation" />
+        <attr name="spanCount" />
+        <attr name="aspectRatio" format="string" />
+    </declare-styleable>
+    <!-- [e] SpannedGridLayoutManager Attr -->
+</resources>

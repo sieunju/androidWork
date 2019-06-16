@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">androidWork</string>
+    <string name="appbar_scrolling_view_behavior">android.support.design.widget.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="resize_header_title">Wild Card</string>
+    <string name="tag_resize">tag_resize_%s</string>
+    <string name="str_tag_resize">tag_resize_</string>
+</resources>

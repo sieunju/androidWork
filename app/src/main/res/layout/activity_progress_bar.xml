@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.ProgressBarActivity">
+
+    <jsieun.com.androidwork.views.CustomProgressView
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30"
+        android:layout_centerInParent="true"
+        android:layout_margin="@dimen/size_20"
+        app:bgColor="@color/color_584E4E"
+        app:gradientCenterColor="@color/color_E27D00"
+        app:gradientEndColor="@color/color_00ff0f"
+        app:gradientLocation="0.3"
+        app:gradientRadius="@dimen/progress_view_radius"
+        app:gradientStartColor="@color/color_ee2d7a"
+        app:max="1000"
+        app:type="horizontal" />
+
+    <TextView
+        android:id="@+id/start_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/progress_bar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_20"
+        android:text="START"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_20" />
+
+    <TextView
+        android:id="@+id/stop_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/start_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_10"
+        android:text="STOP"
+        android:textColor="@color/color_000000"
+        android:textSize="@dimen/size_20" />
+
+
+</RelativeLayout>

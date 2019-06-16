@@ -1,0 +1,50 @@
+================================================
+ Release Note..
+ Branch v1.0.0
+================================================
+[2019.01.16] 수정사항 - hmju
+- ProgressBarActivity 생성후 자연스럽게 이동하는 프로그래스바 로직 처리
+
+[2019.01.27] 수정사항 - hmju
+- 기존 Android 에서 제공하는 ProgressBar 를 제거 하고 SurfaceView 기반의 커스텀 뷰 생성.
+
+[2019.02.17] 수정사항 - hmju
+- SurfaceView 기반의 CustomProgressView 클래스 구현 수평 또는 수직 타입 가능하도록 처리
+- LogUtil -> Logger 클래스 명 변경
+
+[2019.02.24] 수정사항 - hmju
+- 헤더 펼쳐지는 기본 코드 추가
+- 기본적인 BaseViewHolder, BaseAdapter, BaseStruct 등등.. 기본적인 리싸이클러뷰 추가.
+
+[2019.03.16] 수정사항 - hmju
+- ExpandsViewHolder 원하는 위치에서 펼쳐지는 뷰 홀더 로직 추가
+
+[2019.03.24] 수정사항 - hmju
+- ExpandsViewHolder -> ResizeViewHolder 파일명 변경
+- ResizeViewHolder 로직 개선 및 텍스트 알파값 로직 추가
+- StickerItemDecoration 클래스 추가
+- RecyclerView.ItemDecoration -> onDrawOver 오버라이드 함수를 활용한 특정 뷰의 타이틀이
+계속해서 보이도록 로직 분석중...
+
+[2019.04.03] 수정사항 - hmju
+- ExpandableRecyclerAdapter.java 생성 및 필요한 뷰홀더와 이미지, 리스소 파일 추가.
+- BaseExpandableAdapter.java 추상화 클래스 생성 및 RecyclerView 기반의 확장 가능한 어답터 등등..생성
+
+[2019.04.04] 수정사항 - hmju
+- Data Model 로직 개선
+
+[2019.04.07] 수정사항 - hmju
+- 확장 가능한 RecyclerView 로직 추가 및 개선
+
+[2019.04.09] 수정사항 - hmju
+- NAS SVN -> Git Hub 커밋 테스트!!
+- Branch 생성후 테스트..좀 많이 해봄..
+
+[2019.04.20] 수정사항 - hmju
+- Random Multiple Columns RecyclerView 로직 추가
+
+[2019.04.27] 수정사항 - hmju
+- Grid 형태의 랜덤 으로 표시되는 RecyclerView 로직 추가 (어렵다..)
+
+[2019.06.11] 수정사항 - hmju
+- PC 포멧으로 인한 작업중인 코드 백업

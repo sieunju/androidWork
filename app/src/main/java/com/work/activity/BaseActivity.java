@@ -8,6 +8,8 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.work.structs.BaseStruct;
+
 /**
  * BaseActivity Class
  * Created by hmju on 2019-02-24.
@@ -22,6 +24,8 @@ public class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         mContext = this;
         mActivity = this;
+
+        BaseStruct struct = new BaseStruct();
     }
 
     @Override

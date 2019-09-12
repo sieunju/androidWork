@@ -65,6 +65,7 @@ public abstract class BaseAdapter extends RecyclerView.Adapter<BaseViewHolder> {
         mContext = context;
     }
 
+    @SuppressWarnings("unchecked")
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int pos) {
         holder.onBindView(pos, mItems.get(pos).getData());

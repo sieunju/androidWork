@@ -12,7 +12,10 @@ import com.work.activity.LicenseActivity;
 import com.work.activity.ProgressBarActivity;
 import com.work.activity.ResizeRecyclerViewActivity;
 
+import java.util.ArrayList;
 import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -32,12 +35,14 @@ public class MainActivity extends BaseActivity {
 
     private void setData() {
         LinkedList<String> mList = new LinkedList<>();
+        Queue<String> que = new LinkedList<String>();
         mList.add("Open License");
         mList.add("Custom ProgressView");
         mList.add("Parallax Resize View Holder");
         mList.add("Expandable Recycler View");
 
         Button selectButton = null;
+
         for (int i = 0; i < mList.size(); i++) {
             selectButton = new Button(this);
             selectButton.setText(mList.get(i));

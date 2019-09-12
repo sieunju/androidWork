@@ -2,11 +2,22 @@ package com.work.activity;
 
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
+
+import com.work.R;
+import com.work.adapters.FruitAdapter;
+import com.work.interfaces.CustomStickyInterface;
+import com.work.itemDecoration.HeaderItemDecoration;
+import com.work.response.BaseResponseData;
+import com.work.utils.CommandUtil;
+import com.work.utils.CustomLayoutManager;
+import com.work.views.ParallaxHeaderView;
 
 import java.util.HashMap;
 
@@ -15,15 +26,6 @@ import butterknife.BindDimen;
 import butterknife.BindString;
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.work.R;
-import com.work.adapters.FruitAdapter;
-import com.work.interfaces.CustomStickyInterface;
-import com.work.itemDecoration.HeaderItemDecoration;
-import com.work.response.BaseResponseData;
-import com.work.utils.CommandUtil;
-import com.work.utils.CustomLayoutManager;
-import com.work.utils.Logger;
-import com.work.views.ParallaxHeaderView;
 
 /**
  * Coordilayout 을 이용한 특정뷰 리사이징 Activity Class
@@ -152,6 +154,13 @@ public class ResizeRecyclerViewActivity extends BaseActivity implements SwipeRef
             } else {
                 return false;
             }
+        }
+    };
+
+    private RecyclerView.SimpleOnItemTouchListener mSampleListener = new RecyclerView.SimpleOnItemTouchListener(){
+        @Override
+        public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
+            return super.onInterceptTouchEvent(rv, e);
         }
     };
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <android.support.design.widget.CollapsingToolbarLayout
+    <com.google.android.material.appbar.CollapsingToolbarLayout
         android:id="@+id/header_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,12 +28,12 @@
             app:layout_collapseMode="parallax"
             app:layout_collapseParallaxMultiplier="0.5" />
 
-        <android.support.v7.widget.Toolbar
+        <androidx.appcompat.widget.Toolbar
             android:id="@+id/header_toolbar"
             android:layout_width="match_parent"
             android:layout_height="@dimen/size_70"
             android:background="@color/color_00FFFFFF"
             app:layout_collapseMode="pin" />
-    </android.support.design.widget.CollapsingToolbarLayout>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
 
-</android.support.design.widget.AppBarLayout>
+</com.google.android.material.appbar.AppBarLayout>

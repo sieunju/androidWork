@@ -3,13 +3,14 @@ package com.work.activity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.work.R;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
-import com.work.R;
 
 public class LicenseActivity extends BaseActivity {
 

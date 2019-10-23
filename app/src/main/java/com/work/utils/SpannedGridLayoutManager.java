@@ -14,10 +14,10 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.LinearSmoothScroller;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.work.R;
+
 import java.util.ArrayList;
 import java.util.List;
-
-import com.work.R;
 
 /**
  * Created by hmju on 2019-04-22.
@@ -61,6 +61,7 @@ public class SpannedGridLayoutManager extends RecyclerView.LayoutManager {
 
     public interface GridSpanLookup {
         void setRandomInfo(int size);
+
         SpanInfo getSpanInfo(int position);
     }
 
@@ -71,7 +72,7 @@ public class SpannedGridLayoutManager extends RecyclerView.LayoutManager {
     public static class SpanInfo {
         public int columnSpan;
         public int rowSpan;
-        
+
         public SpanInfo(int columnSpan, int rowSpan) {
             this.columnSpan = columnSpan;
             this.rowSpan = rowSpan;
@@ -185,7 +186,7 @@ public class SpannedGridLayoutManager extends RecyclerView.LayoutManager {
     }
 
     @Override
-    public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state){
+    public int scrollVerticallyBy(int dy, RecyclerView.Recycler recycler, RecyclerView.State state) {
         if (getChildCount() == 0 || dy == 0) return 0;
 
         int scrolled;
@@ -327,7 +328,7 @@ public class SpannedGridLayoutManager extends RecyclerView.LayoutManager {
 
             SpanInfo spanInfo;
             int adapterPosition = recycler.convertPreLayoutPositionToPostLayout(position);
-            if (adapterPosition !=  RecyclerView.NO_POSITION) {
+            if (adapterPosition != RecyclerView.NO_POSITION) {
                 spanInfo = spanLookup.getSpanInfo(adapterPosition);
             } else {
                 // item removed from adapter, retrieve its previous span info

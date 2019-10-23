@@ -5,18 +5,18 @@ import android.content.Context;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-
 import com.work.holders.BaseViewHolder;
 import com.work.holders.ResizeViewHolder;
-import com.work.response.BaseResponseData;
 import com.work.itemDecoration.HeaderItemDecoration;
+import com.work.response.BaseResponseData;
 import com.work.structs.AppleStruct;
 import com.work.structs.DynamicData;
 import com.work.structs.GrapeStruct;
 import com.work.structs.OrangeStruct;
 import com.work.structs.ResizeStruct;
+
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * BaseAdapter Class
@@ -68,7 +68,7 @@ public abstract class BaseAdapter extends RecyclerView.Adapter<BaseViewHolder> {
     @SuppressWarnings("unchecked")
     @Override
     public void onBindViewHolder(@NonNull BaseViewHolder holder, int pos) {
-        holder.onBindView(pos, mItems.get(pos).getData());
+        holder.onBindView(pos, mItems.get(pos).data);
     }
 
     @Override

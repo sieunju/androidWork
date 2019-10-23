@@ -157,7 +157,7 @@ public class ResizeRecyclerViewActivity extends BaseActivity implements SwipeRef
         }
     };
 
-    private RecyclerView.SimpleOnItemTouchListener mSampleListener = new RecyclerView.SimpleOnItemTouchListener(){
+    private RecyclerView.SimpleOnItemTouchListener mSampleListener = new RecyclerView.SimpleOnItemTouchListener() {
         @Override
         public boolean onInterceptTouchEvent(@NonNull RecyclerView rv, @NonNull MotionEvent e) {
             return super.onInterceptTouchEvent(rv, e);

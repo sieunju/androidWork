@@ -4,12 +4,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
 import com.work.R;
 import com.work.utils.Logger;
 import com.work.views.CustomProgressView;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class ProgressBarActivity extends BaseActivity {
 

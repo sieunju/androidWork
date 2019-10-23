@@ -329,7 +329,7 @@ public class CustomProgressView extends SurfaceView implements Callback {
                         }
                         // type horizontal
                         if (mType == TYPE.HORIZONTAL) {
-                            float updateValue = (float) width / mMax * mCurrentProgress;
+                            float updateValue = (float) width * ((float) mCurrentProgress / (float) mMax);
                             fgRect.right = (int) updateValue;
                         }
                         // type vertical

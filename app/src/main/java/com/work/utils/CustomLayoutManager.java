@@ -33,8 +33,6 @@ public class CustomLayoutManager extends LinearLayoutManager {
         return super.scrollVerticallyBy(dy, recycler, state);
     }
 
-
-
     @Override
     public int computeVerticalScrollOffset(RecyclerView.State state) {
 
@@ -82,7 +80,6 @@ public class CustomLayoutManager extends LinearLayoutManager {
     public void onMeasure(RecyclerView.Recycler recycler, RecyclerView.State state, int widthSpec, int heightSpec) {
         super.onMeasure(recycler, state, widthSpec, heightSpec);
     }
-
 
 
 // LayoutManager Override [End]

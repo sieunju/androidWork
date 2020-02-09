@@ -13,13 +13,10 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import java.util.HashMap;
-
-import butterknife.BindDimen;
-import butterknife.BindString;
-import butterknife.BindView;
 import com.work.R;
 import com.work.structs.ResizeStruct;
+
+import java.util.HashMap;
 
 /**
  * 원하는 위치에 맞게 이미지 사이즈가 확장되거나 줄어드는 뷰 홀더
@@ -29,19 +26,12 @@ public class ResizeViewHolder extends BaseViewHolder<ResizeStruct>
         implements ViewTreeObserver.OnScrollChangedListener {
 
     ViewGroup mViewGroup;
-    @BindView(R.id.resize_rl_layout)
     RelativeLayout mResizeLayout;
-    @BindView(R.id.resize_center_rl_layout)
     RelativeLayout mResizeAlphaLayout;
-    @BindView(R.id.resize_center_text_view)
     TextView mCenterTextView;
-    @BindView(R.id.resize_bottom_text_view)
     TextView mBottomTextView;
-    @BindDimen(R.dimen.size_100)
     int mMaxHeight;
-    @BindDimen(R.dimen.size_50)
     int mMinHeight;
-    @BindString(R.string.tag_resize)
     String mTagFormat;
     private ResizeStruct mData;
 
@@ -61,14 +51,26 @@ public class ResizeViewHolder extends BaseViewHolder<ResizeStruct>
     public ResizeViewHolder(View itemView, ViewGroup parent) {
         super(itemView);
         mViewGroup = parent;
+        initView();
         initSize();
         setObserver();
+    }
+
+    private void initView(){
+        mResizeLayout = mRootView.findViewById(R.id.resize_rl_layout);
+        mResizeAlphaLayout = mRootView.findViewById(R.id.resize_center_rl_layout);
+        mCenterTextView = mRootView.findViewById(R.id.resize_center_text_view);
+        mBottomTextView = mRootView.findViewById(R.id.resize_bottom_text_view);
     }
 
     /**
      * 여러 사이즈들 초기화 하는 부분.
      */
     private void initSize() {
+        mMaxHeight = mContext.getResources().getDimensionPixelOffset(R.dimen.size_100);
+        mMinHeight = mContext.getResources().getDimensionPixelOffset(R.dimen.size_50);
+        mTagFormat = mContext.getString(R.string.tag_resize);
+
         Display display = ((Activity) mContext).getWindowManager().getDefaultDisplay();
         Point size = new Point();
         display.getSize(size);

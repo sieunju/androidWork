@@ -10,12 +10,8 @@ import com.work.adapters.ExpandableAdapter;
 import com.work.response.BaseResponseData;
 import com.work.utils.CommandUtil;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class ExpandableRecyclerViewActivity extends BaseActivity {
 
-    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
 
     private ExpandableAdapter mAdapter;
@@ -25,8 +21,8 @@ public class ExpandableRecyclerViewActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expandable_recycler_view);
-        ButterKnife.bind(this);
 
+        mRecyclerView = findViewById(R.id.recycler_view);
         setData();
         setAdapter();
     }

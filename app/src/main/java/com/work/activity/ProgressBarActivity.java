@@ -8,19 +8,10 @@ import com.work.R;
 import com.work.utils.Logger;
 import com.work.views.CustomProgressView;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-import butterknife.OnClick;
+public class ProgressBarActivity extends BaseActivity implements View.OnClickListener {
 
-public class ProgressBarActivity extends BaseActivity {
-
-    @BindView(R.id.progress_bar)
     CustomProgressView mProgressBar;
-
-    @BindView(R.id.start_button)
     TextView mButton;
-
-    @BindView(R.id.stop_button)
     TextView mStopButton;
 
     private boolean isRun = true;
@@ -40,12 +31,17 @@ public class ProgressBarActivity extends BaseActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_progress_bar);
-        ButterKnife.bind(this);
+
+        mProgressBar = findViewById(R.id.progress_bar);
+        mButton = findViewById(R.id.start_button);
+        mStopButton = findViewById(R.id.stop_button);
+
+        mProgressBar.setOnClickListener(this);
     }
 
-    @OnClick({R.id.start_button, R.id.stop_button})
-    public void onButtonClick(View id) {
-        switch (id.getId()) {
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
             case R.id.start_button:
                 isRun = true;
                 testProgress();

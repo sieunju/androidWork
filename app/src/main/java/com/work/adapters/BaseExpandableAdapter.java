@@ -38,7 +38,7 @@ public abstract class BaseExpandableAdapter extends RecyclerView.Adapter<BaseExp
     // View Type Define [End]
 
     // 확장 가능한 헤더의 리얼 포지션 값을 Map 에 저장.
-    private HashMap<Integer, Integer> mExpandsRealPositionMap = new LinkedHashMap<Integer, Integer>();
+    private HashMap<Integer, Integer> mExpandsRealPositionMap = new LinkedHashMap<>();
 
     public class ExpandableItemStruct<ITEM> {
         ITEM data;

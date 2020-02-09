@@ -9,8 +9,6 @@ import android.widget.LinearLayout;
 
 import androidx.annotation.Nullable;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
 import com.work.R;
 
 /**
@@ -18,7 +16,6 @@ import com.work.R;
  */
 public class FloatingView extends LinearLayout {
 
-    @BindView(R.id.top_button)
     Button mTopButton;
 
     public FloatingView(Context context) {
@@ -28,7 +25,7 @@ public class FloatingView extends LinearLayout {
     public FloatingView(Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
         View view = LayoutInflater.from(context).inflate(R.layout.layout_floating_btn, this, false);
-        ButterKnife.bind(this, view);
+        mTopButton = view.findViewById(R.id.top_button);
         addView(view);
     }
 

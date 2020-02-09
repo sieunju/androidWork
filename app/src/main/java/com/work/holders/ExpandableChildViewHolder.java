@@ -10,18 +10,16 @@ import androidx.annotation.NonNull;
 import com.work.R;
 import com.work.structs.PeopleStruct;
 
-import butterknife.BindView;
-
 /**
  * Created by hmju on 2019-04-03.
  */
 public class ExpandableChildViewHolder extends BaseExpandableViewHolder<PeopleStruct> {
 
-    @BindView(R.id.child_text_view)
     TextView mChildTextView;
 
     public ExpandableChildViewHolder(View itemView) {
         super(itemView);
+        mChildTextView = itemView.findViewById(R.id.child_text_view);
     }
 
     public static ExpandableChildViewHolder newInstance(ViewGroup parent) {

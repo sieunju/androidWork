@@ -11,13 +11,12 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import java.util.ArrayList;
-
-import butterknife.BindView;
 import com.work.R;
 import com.work.structs.GradeStruct;
 import com.work.structs.PeopleStruct;
 import com.work.utils.Logger;
+
+import java.util.ArrayList;
 
 /**
  * 확장 가능한 뷰홀더 중 헤더 뷰 홀더
@@ -25,11 +24,8 @@ import com.work.utils.Logger;
  */
 public class ExpandableHeaderViewHolder extends BaseExpandableViewHolder<GradeStruct> implements CompoundButton.OnCheckedChangeListener {
 
-    @BindView(R.id.title_text_view)
     TextView mTitleTextView;
-    @BindView(R.id.more_check_box)
     CheckBox mMoreImageView;
-    @BindView(R.id.child_recycler_view)
     RecyclerView mChildRecyclerView;
 
     ExpandableChildAdapter mAdapter;
@@ -45,6 +41,11 @@ public class ExpandableHeaderViewHolder extends BaseExpandableViewHolder<GradeSt
     }
 
     private void initView() {
+
+        mTitleTextView = mRootView.findViewById(R.id.title_text_view);
+        mMoreImageView = mRootView.findViewById(R.id.more_check_box);
+        mChildRecyclerView = mRootView.findViewById(R.id.child_recycler_view);
+
         if (mMoreImageView != null) {
             mMoreImageView.setOnCheckedChangeListener(this);
         }

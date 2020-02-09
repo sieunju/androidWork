@@ -9,19 +9,16 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 public class LicenseActivity extends BaseActivity {
 
-    @BindView(R.id.license_text_view)
     TextView mLicenseTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_license);
-        ButterKnife.bind(this);
+
+        mLicenseTextView = findViewById(R.id.license_text_view);
         setLicense();
     }
 

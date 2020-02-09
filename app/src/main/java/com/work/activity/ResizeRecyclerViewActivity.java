@@ -21,12 +21,6 @@ import com.work.views.ParallaxHeaderView;
 
 import java.util.HashMap;
 
-import butterknife.BindColor;
-import butterknife.BindDimen;
-import butterknife.BindString;
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * Coordilayout 을 이용한 특정뷰 리사이징 Activity Class
  * Created by hmju on 2019-03-01
@@ -37,26 +31,27 @@ public class ResizeRecyclerViewActivity extends BaseActivity implements SwipeRef
     private CustomLayoutManager mLayoutManager;
     private BaseResponseData mData;
 
-    @BindView(R.id.header_view)
     ParallaxHeaderView mHeaderView;
-    @BindView(R.id.recycler_view)
     RecyclerView mRecyclerView;
-    @BindView(R.id.swipe_refresh_layout)
     SwipeRefreshLayout mRefreshLayout;
-    @BindColor(R.color.color_1CC22F)
     int mRefreshColor;
-    @BindDimen(R.dimen.size_5)
     int mDivHeight;
-    @BindString(R.string.str_tag_resize)
     String mHeaderTag;
-    @BindDimen(R.dimen.size_35)
     int mHeaderStickerHeight;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_expands_recycler_view);
-        ButterKnife.bind(this);
+
+        mHeaderView = findViewById(R.id.header_view);
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRefreshLayout = findViewById(R.id.swipe_refresh_layout);
+        mRefreshColor = getResources().getColor(R.color.color_1CC22F);
+        mDivHeight = getResources().getDimensionPixelOffset(R.dimen.size_5);
+        mHeaderTag = getString(R.string.str_tag_resize);
+        mHeaderStickerHeight = getResources().getDimensionPixelOffset(R.dimen.size_35);
+
 
         setData();
         setAdapter();

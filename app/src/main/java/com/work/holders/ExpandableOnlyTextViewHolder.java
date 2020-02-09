@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 
-import butterknife.BindView;
 import com.work.R;
 import com.work.structs.TitleOnlyStruct;
 
@@ -17,11 +16,11 @@ import com.work.structs.TitleOnlyStruct;
  */
 public class ExpandableOnlyTextViewHolder extends BaseExpandableViewHolder<TitleOnlyStruct> {
 
-    @BindView(R.id.expandable_only_text_view)
     TextView mTitleTextView;
 
     public ExpandableOnlyTextViewHolder(View itemView) {
         super(itemView);
+        mTitleTextView = mRootView.findViewById(R.id.expandable_only_text_view);
     }
 
     public static ExpandableOnlyTextViewHolder newInstance(ViewGroup parent) {

@@ -6,8 +6,6 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import butterknife.ButterKnife;
-
 /**
  * Created by hmju on 2019-04-07.
  */
@@ -23,8 +21,5 @@ public abstract class BaseExpandableViewHolder<T> extends RecyclerView.ViewHolde
         super(itemView);
         mContext = itemView.getContext();
         mRootView = itemView;
-        ButterKnife.bind(this, mRootView);
     }
-
-
 }

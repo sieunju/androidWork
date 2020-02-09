@@ -13,20 +13,14 @@ import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.work.R;
 
-import butterknife.BindView;
-import butterknife.ButterKnife;
-
 /**
  * Created by hmju on 2019-02-25.
  */
 public class ParallaxHeaderView extends CoordinatorLayout {
 
     protected final Context mContext;
-    @BindView(R.id.header_layout)
     CollapsingToolbarLayout mRootView;
-    @BindView(R.id.header_image_view)
     ImageView mHeaderImageView;
-    @BindView(R.id.header_toolbar)
     Toolbar mHeaderToolBar;
 
     // [s] Attr Define
@@ -59,8 +53,14 @@ public class ParallaxHeaderView extends CoordinatorLayout {
 
         String infService = Context.LAYOUT_INFLATER_SERVICE;
         LayoutInflater layoutInflater = (LayoutInflater) mContext.getSystemService(infService);
+        if (layoutInflater == null) return;
+
         View view = layoutInflater.inflate(R.layout.parallax_header_view, this, false);
-        ButterKnife.bind(this, view);
+
+        mRootView = view.findViewById(R.id.header_layout);
+        mHeaderImageView = view.findViewById(R.id.header_image_view);
+        mHeaderToolBar = view.findViewById(R.id.header_toolbar);
+
         addView(view);
 
         mHeaderImageView.setVisibility((mImageViewVisible) ? VISIBLE : GONE);

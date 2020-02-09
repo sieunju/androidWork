@@ -29,4 +29,15 @@
         <item name="android:textSize">30dp</item>
     </style>
 
+    <!-- CharacterWrapTextView Attributes -->
+    <declare-styleable name="CharacterWrapTextView">
+        <attr name="isEllipsis" format="boolean" /> <!-- 말줄임 표시 유무 -->
+        <attr name="afterText" format="reference|string" /> <!-- 말줄임 이후 추가할 텍스트 -->
+        <attr name="afterTextColor" format="reference|color" /> <!-- 말줄임 이후 추가할 텍스트 색상 -->
+        <attr name="afterTextSize" format="dimension" /> <!-- 말줄임 이후 추가할 텍스트 크기 -->
+        <attr name="afterTextIsUnderLine" format="boolean" /> <!-- 말줄임 이후 추가할 텍스트 밑줄 표시 유무 -->
+        <attr name="afterTextIsBold" format="boolean" /> <!-- 말줄임 이후 추가할 텍스트 굵기 처리 -->
+    </declare-styleable>
+
+
 </resources>
